@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    
+  </head>
+  <body>
+    <main>
+
+      <section id="table">
+       
+      <div class="container-fluid">
+        <div class="row">
+          
+          <div class="col-1">
+            <div class="row">
+              <div class="col-10 " >Hr module</div>
+              <div class="col-2">
+                <i class="bi bi-caret-down-fill fa-xxs "></i>
+              </div>
+            </div>
+            <p style="font-size: 90%; font-weight: bold;">Interview</p>
+            <div class=" neol">
+              <div class="col-12">
+              Neologicx
+              </div>
+              </div>
+          </div>
+
+
+          <div class="col-10">
+            <div class="row admin">
+              <div class="col-12">Admin</div>
+            </div>
+
+            <nav class="navbar  ">
+              <div class="container-fluid p-0"> <!--p-0 is paddind equals zero-->
+                <a style="font-size: 90%; font-weight: bold;" class="navbar-brand" href="#">Interview Candidates</a>
+                <p style="font-size: 90% ; font-weight: bold; margin-bottom: 0%;" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"> <i class="bi bi-caret-left-fill"></i>
+                  Create new </p>
+                  
+                
+                <div style="width: 25%;" class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                  
+                    
+                      <button style="width: 40%; font-size: 90%; font-weight: bold;" class="navbar-toggler btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation"><i class="bi bi-caret-left-fill"></i>  Create new </button><br>
+                    
+                
+                          <button type="button" class="btn btn-outline-dark" data-bs-toggle="modal" data-bs-target="#exampleModalLong" data-whatever="@mdo" style="width: 70%; border-bottom: 2px solid black; margin-left: 2%;">
+                            Add New Candidate
+                          </button>
+
+
+                        </div>
+                      </div>
+                    </nav>
+                    <p style="font-size: 90%; margin-top: 3%; font-weight:600; margin-bottom: 0%; border-bottom: 1px solid rgba(85, 85, 85, 0.8);">Candidates</p>
+      
+
+     
+                    <div class="modal fade " id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
+                      <div class="modal-dialog modal-dialog-scrollable" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLongTitle">Add Candidate</h5>
+                            <button type="button" class="close" data-bs-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>  <!--it works with data-bs-dismiss yayyyyy-->
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                          
+                                    <form method="POST" action="send.php">
+                                        <fieldset class=" p-3">
+                                          <legend  class="float-none w-auto px-2">Application Form</legend>
+                                          <h3>Personal Information</h3>
+
+                                          <div class="row g-4">
+                                            <div class="col">
+                                              <label for="inputfname" class="form-label">Full Name</label>
+                                              <input type="text" name="fname" id="inputfname" class="form-control" placeholder="First name" aria-label="First name">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">&nbsp;</label>
+                                              <input type="text" name="midname" class="form-control" placeholder="Middle name" aria-label="Middle name">
+                                            </div>
+                                            <div class="col">
+                                                <label class="form-label">&nbsp;</label>
+                                                <input type="text" name="lname" class="form-control" placeholder="Last name" aria-label="name">
+                                              </div>
+                                          </div>
+
+                                          <div class="row g-4">
+                                          <div class="col">
+                                            <label for="inputDate" class="form-label">Date</label>
+                                            <input type="date" class="form-control" id="inputDate">
+                                          </div>
+                                          <div class="col">
+                                            <label for="inputage" class="form-label">Age</label>
+                                            <input type="number" class="form-control" id="inputage" min="12">
+                                          </div>
+                                          <div class="col">
+                                            <label for="inputgender" class="form-label">Gender</label>
+                                            <select class="form-select" id="inputGroupSelect04" >
+                                              <option selected>Female</option>
+                                              <option value="2">Male</option>
+                                              <option value="3">Transgender</option>
+                                              <option value="4">Others</option>
+                                              <option value="5">Prefer Not To Say</option>
+                                            </select>
+                                          </div>
+                                          </div>
+
+                                          <div class="row-g-4">
+                                            <label for="formaddress" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="formaddress" placeholder="Street Address" style="margin-bottom: 10px;">
+                                            <input type="text" class="form-control" id="formaddress" placeholder="Street Address Line 2">
+                                          </div>
+
+                                          <div class="row g-4">
+                                          <div class="col">
+                                            <label for="inputcity" class="form-label">City</label>
+                                            <input type="text" class="form-control" id="inputcity">
+                                          </div>
+                                          <div class="col">
+                                            <label for="inputstate" class="form-label">State</label>
+                                            <input type="text" class="form-control" id="inputstate">
+                                          </div>
+                                        </div>
+
+                                        <div class="row-g-4">
+                                          <label for="inputzipcode" class="form-label">Postal / Zip Code</label>
+                                          <input type="text" class="form-control" id="inputzipcode" >
+                                          </div>
+
+                                          <div class="row g-4">
+                                            <div class="col">
+                                              <label for="inputnum" class="form-label">Contact No.</label>
+                                              <input type="number" name="pnumber" class="form-control" id="inputnum">
+                                            </div>
+                                            <div class="col">
+                                              <label for="inputmail" class="form-label">Email</label>
+                                              <input type="text"  name="mail" class="form-control" id="inputmail">
+                                            </div>
+                                          </div>
+
+                                          <div class="row g-4">
+                                            <div class="col">
+                                              <label for="inputposition" class="form-label">Applied Position</label>
+                                              <input type="text" name="position" class="form-control" id="inputposition">
+                                            </div>
+                                            <div class="col">
+                                              <label for="inputstartdate" class="form-label">Earliest Possible Start Date</label>
+                                              <input type="date" class="form-control" id="inputstartdate">
+                                            </div>
+                                          </div>
+
+                                          <div class="row g-4">
+                                            <div class="col">
+                                              <label for="inputintdate" class="form-label">Preferred Interview Date</label>
+                                              <input type="date" class="form-control" id="inputintdate">
+                                            </div>
+                                            <div class="col">
+                                              <label for="inputexp" class="form-label">&nbsp;</label>
+                                              <select class="form-select" id="inputexp" >
+                                                <option selected disabled value="">Experience Level</option>
+                                                <option value="1">Student</option>
+                                                <option value="2">1-2 Yr</option>
+                                                <option value="3">3-4 Yr</option>
+                                                <option value="4">5+ Yrs</option>
+                                              </select>
+                                            </div>
+                                          </div>
+
+                                          <div class="mb-3">
+                                            <label for="exampleFormControlTextarea1" class="form-label">Cover Letter</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="PLease Do Not Exceed 200 Words"></textarea>
+                                          </div>
+
+
+                                          <div style="margin-bottom: 2%;" class="file-upload-wrapper">
+                                            
+                                            <input type="file" id="input-file-now"  class="file-upload" />
+                                          </div>
+
+                                          <div class="file-upload-wrapper">
+                                            
+                                            <input type="file" id="input-file-now"  class="file-upload" />
+                                          </div>
+
+                                          <button style=" margin: 2% 43% 2%; padding: 0 20px 0 20px; border: 2px solid black;" type="submit" name="btn" class="btn btn-outline-dark">Apply</button>
+
+                                        </fieldset>
+                                      </form>
+
+                        </div>
+                        <div class="modal-footer"></div>
+                      </div>
+                    </div>
+                    </div>
+
+  
+
+              <nav class="navbar navbar-expand-lg ">
+                <div class="container-fluid">
+                  <form class="d-flex" role="search">
+                  <input class="form-control" id="myInput" type="search" placeholder="Search..">
+                  </form>
+
+                  <div class="collapse navbar-collapse" id="navbarText">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    </ul>
+                    <span class="navbar-text" style="border-right: 2px solid black; color: rgb(55, 117, 168); text-decoration: underline;">
+                      All Status
+                    </span><span class="navbar-text" style="border-right: 2px solid black; color: rgb(55, 117, 168); text-decoration: underline;">
+                      More Filter
+                    </span>
+                    <span class="navbar-text" style="border-right: 2px solid black; color: rgb(55, 117, 168); text-decoration: underline;">
+                      Column
+                    </span>
+                    <span class="navbar-text" style="color: rgb(55, 117, 168); text-decoration: underline;">
+                      Export
+                    </span>
+                  </div>
+                </div>
+              </nav>
+
+              <div class="row ">
+                <div class="nestable table-height col-12">
+        
+                  <table class="table table-bordered border-dark table-striped table-hover">
+                      <thead >
+                        <tr>
+                          <th scope="col">Sr No.</th>
+                          <th scope="col">Candidate Name</th>
+                          <th scope="col">Mobile No.</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Position</th>
+                          <th scope="col">Application Form</th>
+                          <th scope="col">Resume</th>
+                          <th scope="col">Experience</th>
+
+                        </tr>
+                      </thead>
+                      <tbody id="myTable">
+                        <tr>
+                          <th scope="row">1</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">2</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">3</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">4</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">5</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">6</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">7</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">8</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">9</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">10</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                        <tr>
+                          <th scope="row">11</th>
+                          <td>Muskan Saxena</td>
+                          <td>9745574934</td>
+                          <td>muskanasaxena@gmail.com</td>
+                          <td>fresher</td>
+                          <td>View Button</td>
+                          <td>View Resume</td>
+                          <td>Student</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  
+
+                </div>
+              </div>
+
+              <div class="row align-items-end">
+                <div class="col-12">
+                
+                </div>
+                </div>
+
+          </div>
+
+
+        </div>
+      </div>
+
+
+
+      </section>
+
+</main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
+    
+    <script src="/script.js"></script>
+
+    
+  
+  </body>
+</html>
